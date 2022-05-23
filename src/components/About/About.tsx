@@ -25,7 +25,7 @@ const About = () => {
                         index={15} />
                     </h1>
                     <p> I'm a Dallas based Software Engineer! I'm currently working as a Frontend Developer using React/CSS/HTML. 
-                        Currently I'm looking for a role that will allow me to work on interesting and impactful project. 
+                        Currently I'm looking for a role that will allow me to work on interesting and impactful projects. 
                         This position would give me the opportunity to improve my skills and challenge me to grow and perform.</p>
                     <p>When I'm not coding I enjoy playing Rugby, hanging out with friends, playing with my dog, and traveling.</p>
                 </div>
