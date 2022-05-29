@@ -1,12 +1,13 @@
 .home-page {
     
     .text-zone {
-        position: absolute;
+        position: relative;
         left: 10%;
-        top: 50%;
+        top: 30%;
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
+        margin-right: 150px;
     }
 
     h1 {
@@ -80,12 +81,14 @@
 
 .stage-cube-cont {
     width: 50%;
-    height: 100%;
+    height: 50%;
+    /*
     top: 0;
-    padding-top: 20%;
-    margin-left: 0;
+    padding-top: 30%;
+    left: 50%;
     position: absolute;
     right: 20%;
+    */
     overflow: hidden;
 
 }
