@@ -4,9 +4,13 @@
     position: absolute;
 }
 
-.top-tags {
+.top-tag {
     bottom: auto;
-    top: 35px;
+    top: 2rem;
+}
+
+.bottom-tag {
+    margin-bottom: 1rem;
 }
 
 .tags {
@@ -17,10 +21,6 @@
     left: 120px;
     font-size: 18px;
     font-family: 'La Belle Aurore';
-}
-
-.bottom-tag-html {
-    margin-left: -20px;
 }
 
 .container {
