@@ -1,90 +1,68 @@
-import './Home.scss'
-import LogoTitle from '../../assets/images/logo-a.png'
-import { Link } from 'react-router-dom'
-import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
-import { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from '@fortawesome/free-brands-svg-icons'
-import { faMobileAlt } from '@fortawesome/free-solid-svg-icons'
+import React from 'react';
+import styled from '@emotion/styled';
+import ProfilePic from '../../assets/images/about-me-profile-pic.png';
+import { Stack, Typography } from '@mui/material';
+import { Container } from '@mui/system';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-const Home = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const nameText = 'ndrew'
-  const jobText = 'Web Developer'
-  const nameArray = Array.from(
-    { length: nameText.length },
-    (_, i) => nameText[i]
-  )
-  const jobArray = Array.from({ length: jobText.length }, (_, i) => jobText[i])
+const HomeStackStyled = styled(Stack)`
+  align-items: center;
+  justify-content: center;
+  min-width: 200px;
+`;
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 4000)
-    return () => clearTimeout(timer)
-  }, [])
+const ProfilePicStyled = styled('img')`
+  width: 400px;
+  min-width: 150px;
+  overflow: hidden;
+`;
 
-  return (
-    <>
-      <div className="container home-page">
-        <div className="text-zone">
-          <h1>
-            <span className={letterClass}>H</span>
-            <span className={`${letterClass} _12`}>i,</span>
-            <br />
-            <span className={`${letterClass} _13`}>I</span>
-            <span className={`${letterClass} _14`}>'m</span>
-            <img src={LogoTitle} alt="developer" />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={nameArray}
-              index={15}
-            />
-            <br />
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={jobArray}
-              index={22}
-            />
-          </h1>
-          <h2>Frontend Developer / Mobile Applications Developer</h2>
-          <Link to="/contact" className="flat-button">
-            CONTACT ME
-          </Link>
-        </div>
-        <div className="stage-cube-cont">
-          <div className="cubespinner">
-            <div className="face1">
-              <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-            </div>
-            <div className="face2">
-              <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
-            </div>
-            <div className="face3">
-              <FontAwesomeIcon icon={faHtml5} color="#F06529" />
-            </div>
-            <div className="face4">
-              <FontAwesomeIcon icon={faGitAlt} color="#EC4D28" />
-            </div>
-            <div className="face5">
-              <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-            </div>
-            <div className="face6">
-              <FontAwesomeIcon icon={faMobileAlt} color="#28A4D9" />
-            </div>
-          </div>
-        </div>
-      </div>
-      <Loader type="pacman" active />
-    </>
-  )
-}
+const IconStyled = styled('a')`
+  font-size: 30px;
 
-export default Home
+  &:hover svg {
+    color: #ffd700;
+  }
+  
+`;
+
+const Home = () => (
+    <HomeStackStyled direction="row" spacing={2}>
+      <ProfilePicStyled src={ ProfilePic } alt="profile-pic" />
+      <Stack>
+        <Typography variant="h2">
+          Hi, I'm Andrew
+        </Typography>
+        <Typography variant="h3">
+          I'm a Frontend Developer
+        </Typography>
+        <Typography variant="subtitle1">
+          ☕️ Fueled by coffee
+        </Typography>
+        <Typography variant="subtitle1">
+          📍 Dallas, TX
+        </Typography>
+        <Typography variant="subtitle1">
+          💻 Frontend Developer for McKesson
+        </Typography>
+        <Container>
+          <IconStyled 
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.linkedin.com/in/andrew-palet/">
+            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+          </IconStyled>
+          <IconStyled 
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/AndrewPalet">
+              <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+          </IconStyled>
+        </Container>
+      </Stack>
+    </HomeStackStyled>
+)
+
+export default Home;

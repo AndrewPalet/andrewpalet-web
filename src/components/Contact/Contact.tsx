@@ -1,4 +1,3 @@
-import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import './Contact.scss';
 import { useEffect, useRef, useState } from 'react';
 import Loader from 'react-loaders';
@@ -35,11 +34,6 @@ const Contact = () => {
         <>
             <div className='container contact-page'>
                 <div className="text-zone">
-                    <h1>
-                        <AnimatedLetters letterClass={letterClass}
-                        strArray={titelArray}
-                        index={15} />
-                    </h1>
                     <p>If you're looking for a trustworthy developer who's skills and values align 
                         with an open position, feel free to contact me via form below.</p>
                     <div className="contact-form">

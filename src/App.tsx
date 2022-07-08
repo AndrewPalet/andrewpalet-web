@@ -1,22 +1,36 @@
 import React from 'react';
-import './App.scss';
-import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import styled from '@emotion/styled';
+import { theme } from './Theme';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
+import Container from '@mui/material/Container';
+
+// CSS
+import './App.scss';
+
+const MainContainer = styled(Container)`
+  //background: #022c43;
+  //text-align: center;
+`;
 
 function App() {
   return (
-    <>
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Route>
-    </Routes>
-    </>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <MainContainer>
+          <Home />
+          <About />
+          <Projects />
+          <Skills />
+        </MainContainer>
+      </ThemeProvider>
+    </Router>
+    
   );
 }
 
