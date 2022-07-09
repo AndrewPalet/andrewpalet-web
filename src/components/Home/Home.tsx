@@ -11,12 +11,13 @@ const HomeStackStyled = styled(Stack)`
   align-items: center;
   justify-content: center;
   min-width: 200px;
+  //overflow: auto;
+  margin: 50px 0 50px 0;
 `;
 
 const ProfilePicStyled = styled('img')`
   width: 400px;
-  min-width: 150px;
-  overflow: hidden;
+  overflow: auto;
 `;
 
 const IconStyled = styled('a')`
@@ -25,11 +26,11 @@ const IconStyled = styled('a')`
   &:hover svg {
     color: #ffd700;
   }
-  
+
 `;
 
 const Home = () => (
-    <HomeStackStyled direction="row" spacing={2}>
+    <HomeStackStyled direction="row" spacing={2} id="HomeStack">
       <ProfilePicStyled src={ ProfilePic } alt="profile-pic" />
       <Stack>
         <Typography variant="h2">

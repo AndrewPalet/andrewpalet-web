@@ -14,15 +14,14 @@ import Container from '@mui/material/Container';
 import './App.scss';
 
 const MainContainer = styled(Container)`
-  //background: #022c43;
-  //text-align: center;
+  //height: 100vh;
 `;
 
 function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <MainContainer>
+        <MainContainer id='MainContainer'>
           <Home />
           <About />
           <Projects />
