@@ -11,7 +11,6 @@ const HomeStackStyled = styled(Stack)`
   align-items: center;
   justify-content: center;
   min-width: 200px;
-  //overflow: auto;
   margin: 50px 0 50px 0;
 `;
 

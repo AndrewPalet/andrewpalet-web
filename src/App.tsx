@@ -26,6 +26,7 @@ function App() {
           <About />
           <Projects />
           <Skills />
+          <Contact />
         </MainContainer>
       </ThemeProvider>
     </Router>
