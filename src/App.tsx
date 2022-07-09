@@ -12,6 +12,7 @@ import Container from '@mui/material/Container';
 
 // CSS
 import './App.scss';
+import NavBar from './components/NavBar/NavBar';
 
 const MainContainer = styled(Container)`
   //height: 100vh;
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <ThemeProvider theme={theme}>
         <MainContainer id='MainContainer'>
+          <NavBar />
           <Home />
           <About />
           <Projects />
