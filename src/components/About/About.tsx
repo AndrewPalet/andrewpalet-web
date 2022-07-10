@@ -1,52 +1,24 @@
-import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
-import './About.scss'
-import { useEffect, useState } from 'react'
-import Loader from 'react-loaders'
-import ProfilePic from '../../assets/images/about-me-profile-pic.png'
+import React from 'react'
+import styled from '@emotion/styled'
+import { Container, Typography } from '@mui/material'
 
-const About = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const aboutText = 'About Me'
-  const aboutArray = Array.from(
-    { length: aboutText.length },
-    (_, i) => aboutText[i]
-  )
+const AboutContainer = styled(Container)`
+  text-align: center;
+  margin: 100px 0 100px 0;
+`
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-    return () => clearTimeout(timer)
-  }, [])
-
-  return (
-    <>
-      <div className="container about-page">
-        <div className="text-zone">
-          <h1>
-            <AnimatedLetters
-              letterClass={letterClass}
-              strArray={aboutArray}
-              index={15}
-            />
-          </h1>
-          <p>
-            I'm a Dallas based Software Engineer! I'm currently working as a
-            Frontend Developer using React/CSS/HTML. Currently I'm looking for a
-            role that will allow me to work on interesting and impactful
-            projects. This position would give me the opportunity to improve my
-            skills and challenge me to grow and perform.
-          </p>
-          <p>
-            When I'm not coding I enjoy playing Rugby, hanging out with friends,
-            playing with my dog, and traveling.
-          </p>
-        </div>
-        <img className="profile-pic" src={ProfilePic} alt="profile-pic" />
-      </div>
-      <Loader type="pacman" active />
-    </>
-  )
-}
+const About = () => (
+  <AboutContainer>
+    <Typography variant="h1" sx={{ marginBottom: 2 }}>
+      About
+    </Typography>
+    <Typography variant="h3">
+      I'm a Dallas based Software Engineer. I graduated with a Bachelor's in
+      Computer Science from the University of Texas at Dallas. Currently working
+      as a Frontend Developer at McKesson. When I'm not coding I enjoy playing
+      Rugby, hanging out with friends, playing with my dog, and traveling.
+    </Typography>
+  </AboutContainer>
+)
 
 export default About
