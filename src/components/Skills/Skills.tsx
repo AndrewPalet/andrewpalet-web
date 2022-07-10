@@ -8,7 +8,7 @@ import { skillsList } from '../../data/data'
 
 const SkillsContainer = styled(Container)`
   text-align: center;
-  margin: 50px 0 50px 0;
+  margin: 100px 0 100px 0;
 `
 
 const SkillGridItem = styled(Grid)`
@@ -21,19 +21,16 @@ const Skills = () => {
   return (
     <SkillsContainer id="Skills-Container">
       <MemoryIcon />
-      <Typography variant="h2" sx={{ marginBottom: 5 }}>
+      <Typography variant="h2" sx={{ marginBottom: 2 }}>
         Skills & Technologies
       </Typography>
       <Grid
         container
-        direction="row"
-        justifyContent="center"
-        rowSpacing={2}
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        spacing={2}
         id="Skills-Grid"
       >
         {skillsList.map((skill: string) => (
-          <SkillGridItem item xs={12} sm={6} md={6}>
+          <SkillGridItem item xs={12} md={6}>
             <SkillCard skill={skill} />
           </SkillGridItem>
         ))}

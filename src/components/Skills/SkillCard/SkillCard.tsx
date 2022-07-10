@@ -23,9 +23,7 @@ const SkillCard = (props:SkillProp) => {
     <Card sx={{ width: 350, minWidth: 250}}>
       <CardContentStyled>
         <CheckCircleIcon sx={{ fontSize: 25, paddingRight: 2 }}/>
-        <Typography gutterBottom variant="h4" component="span" sx={{
-            padding:0
-        }}>
+        <Typography variant="h4" component="span">
           {props.skill}
         </Typography>
       </CardContentStyled>

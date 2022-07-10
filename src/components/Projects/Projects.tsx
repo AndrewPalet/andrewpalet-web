@@ -8,7 +8,7 @@ import LaptopMacIcon from '@mui/icons-material/LaptopMac'
 
 const ProjectsContainer = styled(Container)`
   text-align: center;
-  margin: 50px 0 50px 0;
+  margin: 100px 0 100px 0;
 `
 
 const ProjectGridItem = styled(Grid)`
@@ -21,15 +21,12 @@ const Projects = () => {
   return (
     <ProjectsContainer id="ProjectsContainer">
       <LaptopMacIcon />
-      <Typography variant="h2" sx={{ marginBottom: 5 }}>
+      <Typography variant="h2" sx={{ marginBottom: 2 }}>
         Projects
       </Typography>
       <Grid
         container
         spacing={2}
-        sx={{
-          
-        }}
         id="Projects-Grid"
       >
         {projects.map((project) => (

@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#707070',
+      main: '#2d9cdb',
       dark: '#2e85d4', // Hover colour which in our case is a lighter colour
     },
     secondary: {

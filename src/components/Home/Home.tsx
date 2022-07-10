@@ -29,7 +29,7 @@ const IconStyled = styled('a')`
 `;
 
 const Home = () => (
-    <HomeStackStyled direction="row" spacing={2} id="HomeStack">
+    <HomeStackStyled direction={{ xs: 'column', md: 'row' }} spacing={2} id="HomeStack">
       <ProfilePicStyled src={ ProfilePic } alt="profile-pic" />
       <Stack>
         <Typography variant="h2">
@@ -47,7 +47,7 @@ const Home = () => (
         <Typography variant="subtitle1">
           💻 Frontend Developer for McKesson
         </Typography>
-        <Container>
+        <Container sx={{ display: 'flex', justifyContent: 'space-evenly'}}>
           <IconStyled 
             target="_blank"
             rel="noreferrer"
