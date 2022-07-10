@@ -5,7 +5,7 @@ import CardContent from '@mui/material/CardContent'
 import Typography from '@mui/material/Typography';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 
-interface SkillCardProps {
+interface SkillProp {
     skill: string;
 }
 
@@ -14,8 +14,11 @@ const CardContentStyled = styled(CardContent)`
     align-items: center;
     justify-content: flex-start;
 `;
+/* TODO 
+    Take out paddingLeft
+*/
 
-const SkillCard = (props:SkillCardProps) => {
+const SkillCard = (props:SkillProp) => {
   return (
     <Card sx={{ width: 350, minWidth: 250}}>
       <CardContentStyled>
