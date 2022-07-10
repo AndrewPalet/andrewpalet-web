@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import './Contact.scss'
-import { useEffect, useRef, useState } from 'react'
-import Loader from 'react-loaders'
+import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
-import { Typography } from '@mui/material'
+import { Box, Button, TextField, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 
 const ContactContainer = styled(Container)`
@@ -13,25 +11,7 @@ const ContactContainer = styled(Container)`
 `
 
 const Contact = () => {
-  return (
-    <ContactContainer>
-      <Typography variant="h2">Contact Me</Typography>
-    </ContactContainer>
-  )
-}
-
-const ContactMe = () => {
-  const [letterClass, setLetterClass] = useState('text-animate')
-  const title = 'Contact Me'
-  const titelArray = Array.from({ length: title.length }, (_, i) => title[i])
   const refForm = useRef()
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLetterClass('text-animate-hover')
-    }, 3000)
-    return () => clearTimeout(timer)
-  }, [])
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -55,49 +35,67 @@ const ContactMe = () => {
   }
 
   return (
-    <>
-      <div className="container contact-page">
-        <div className="text-zone">
-          <p>
-            If you're looking for a trustworthy developer who's skills and
-            values align with an open position, feel free to contact me via form
-            below.
-          </p>
-          <div className="contact-form">
-            <form ref={refForm.current} onSubmit={sendEmail}>
-              <ul>
-                <li className="half">
-                  <input type="text" name="name" placeholder="Name" required />
-                </li>
-                <li className="half">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                </li>
-                <li>
-                  <input
-                    type="text"
-                    name="subject"
-                    placeholder="Subject"
-                    required
-                  />
-                </li>
-                <li>
-                  <textarea name="message" placeholder="Message" required />
-                </li>
-                <li>
-                  <input type="submit" className="flat-button" value="SEND" />
-                </li>
-              </ul>
-            </form>
-          </div>
+    <ContactContainer id="Contact-Container">
+      <Typography variant="h1">Contact Me</Typography>
+      <Box
+        component="form"
+        ref={refForm.current}
+        onSubmit={sendEmail}
+        sx={{
+          '& .MuiTextField-root': { m: 1 },
+          paddingLeft: 20,
+          paddingRight: 20,
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <Box sx={{ display: 'flex' }}>
+          <TextField
+            required
+            type="text"
+            id="form-name"
+            name="name"
+            label="Name"
+            style={{ flex: 1 }}
+          />
+          <TextField
+            required
+            type="email"
+            name="email"
+            id="form-email"
+            label="Email"
+            style={{ flex: 1 }}
+          />
+        </Box>
+        <div>
+          <TextField
+            required
+            fullWidth
+            type="text"
+            name="subject"
+            id="form-subject"
+            label="Subject"
+          />
         </div>
-      </div>
-      <Loader type="pacman" active />
-    </>
+        <div>
+          <TextField
+            required
+            fullWidth
+            type="text"
+            name="message"
+            id="form-message"
+            label="Message"
+            multiline
+            rows={4}
+          />
+        </div>
+        <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+          <Button variant="contained" type="submit">
+            Send
+          </Button>
+        </Box>
+      </Box>
+    </ContactContainer>
   )
 }
 

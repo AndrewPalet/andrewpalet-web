@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import styled from '@emotion/styled'
 import SkillCard from './SkillCard/SkillCard'
 import { Container } from '@mui/system'
@@ -21,16 +22,12 @@ const Skills = () => {
   return (
     <SkillsContainer id="Skills-Container">
       <MemoryIcon />
-      <Typography variant="h2" sx={{ marginBottom: 2 }}>
+      <Typography variant="h1" sx={{ marginBottom: 2 }}>
         Skills & Technologies
       </Typography>
-      <Grid
-        container
-        spacing={2}
-        id="Skills-Grid"
-      >
+      <Grid container spacing={2} id="Skills-Grid">
         {skillsList.map((skill: string) => (
-          <SkillGridItem item xs={12} md={6}>
+          <SkillGridItem item xs={12} md={6} key={uuidv4()}>
             <SkillCard skill={skill} />
           </SkillGridItem>
         ))}

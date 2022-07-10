@@ -1,40 +1,37 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
-import Button from '@mui/material/Button'
 import Typography from '@mui/material/Typography'
 import { CardActionArea } from '@mui/material'
 
 export interface ProjectProps {
-    title: string,
-    subtitle: string,
-    description: string, 
-    image: string,
-    link: string,
+  title: string
+  description: string
+  image: string
+  link: string
 }
 
 /* TODO 
     Take out paddingLeft
+    Open links in another tab (maybe)
 */
 
-const ProjectCard = ({ title, subtitle, description, image, link}: ProjectProps) => {
+const ProjectCard = ({ title, description, image, link }: ProjectProps) => {
   return (
-    <Card sx={{ maxWidth: 345, minWidth: 150 }}>
-      <CardActionArea>
+    <Card sx={{ maxWidth: 350, minWidth: 150 }}>
+      <CardActionArea href={link}>
         <CardMedia
           component="img"
-          height="160"
+          height="200"
           image={image}
           alt="project image"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h3" component="div">
             {title}
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body1" color="text.secondary">
             {description}
           </Typography>
         </CardContent>
@@ -43,4 +40,4 @@ const ProjectCard = ({ title, subtitle, description, image, link}: ProjectProps)
   )
 }
 
-export default ProjectCard;
+export default ProjectCard

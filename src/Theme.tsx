@@ -1,9 +1,9 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme } from '@mui/material/styles'
 
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#2d9cdb',
+      main: '#DAB88B',
       dark: '#2e85d4', // Hover colour which in our case is a lighter colour
     },
     secondary: {
@@ -11,7 +11,7 @@ export const theme = createTheme({
     },
     text: {
       primary: '#000000',
-      secondary: '#2d9cdb',
+      secondary: '#B7CADB',
     },
     background: {
       default: '#ffffff',
@@ -72,6 +72,9 @@ export const theme = createTheme({
     },
   },
   components: {
+    MuiCard: {
+      styleOverrides: {},
+    },
     MuiButton: {
       styleOverrides: {
         text: {
@@ -113,4 +116,4 @@ export const theme = createTheme({
       },
     },
   },
-});
+})

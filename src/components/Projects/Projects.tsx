@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid'
 import styled from '@emotion/styled'
 import ProjectCard from './ProjectCard/ProjectCard'
 import { Container } from '@mui/system'
@@ -21,16 +22,12 @@ const Projects = () => {
   return (
     <ProjectsContainer id="ProjectsContainer">
       <LaptopMacIcon />
-      <Typography variant="h2" sx={{ marginBottom: 2 }}>
+      <Typography variant="h1" sx={{ marginBottom: 2 }}>
         Projects
       </Typography>
-      <Grid
-        container
-        spacing={2}
-        id="Projects-Grid"
-      >
+      <Grid container spacing={2} id="Projects-Grid">
         {projects.map((project) => (
-          <ProjectGridItem item xs={12} md={6}>
+          <ProjectGridItem item xs={12} md={6} key={uuidv4()}>
             <ProjectCard {...project} />
           </ProjectGridItem>
         ))}

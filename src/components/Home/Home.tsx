@@ -4,7 +4,6 @@ import ProfilePic from '../../assets/images/about-me-profile-pic.png';
 import { Stack, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 const HomeStackStyled = styled(Stack)`
@@ -12,11 +11,13 @@ const HomeStackStyled = styled(Stack)`
   justify-content: center;
   min-width: 200px;
   margin: 50px 0 50px 0;
+  overflow: auto;
 `;
 
 const ProfilePicStyled = styled('img')`
-  width: 400px;
-  overflow: auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 `;
 
 const IconStyled = styled('a')`
@@ -29,13 +30,13 @@ const IconStyled = styled('a')`
 `;
 
 const Home = () => (
-    <HomeStackStyled direction={{ xs: 'column', md: 'row' }} spacing={2} id="HomeStack">
+    <HomeStackStyled direction={{ xs: 'column', md: 'row' }} spacing={2} id="HomeStack" minHeight={'100vh'}>
       <ProfilePicStyled src={ ProfilePic } alt="profile-pic" />
-      <Stack>
-        <Typography variant="h2">
-          Hi, I'm Andrew
+      <Stack sx={{ paddingLeft: 1 }}>
+        <Typography variant="h1">
+          Howdy, I'm Andrew
         </Typography>
-        <Typography variant="h3">
+        <Typography variant="h2">
           I'm a Frontend Developer
         </Typography>
         <Typography variant="subtitle1">
@@ -47,7 +48,7 @@ const Home = () => (
         <Typography variant="subtitle1">
           💻 Frontend Developer for McKesson
         </Typography>
-        <Container sx={{ display: 'flex', justifyContent: 'space-evenly'}}>
+        <Container sx={{ display: 'flex', justifyContent: 'space-evenly', paddingTop: 1}}>
           <IconStyled 
             target="_blank"
             rel="noreferrer"

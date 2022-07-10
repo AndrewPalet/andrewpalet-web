@@ -11,10 +11,10 @@ import Skills from './components/Skills/Skills'
 import Container from '@mui/material/Container'
 import NavBar from './components/NavBar/NavBar'
 
-
 const AppContainer = styled(Container)`
   background-color: #fdf6ec;
-  overflow: hidden;
+  overflow: auto;
+  overflow-wrap: break-word;
 `
 const ContentContainer = styled(Container)`
   //background-color: #fdf6ec;
