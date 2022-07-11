@@ -24,13 +24,13 @@ const IconStyled = styled('a')`
   font-size: 30px;
 
   &:hover svg {
-    color: #ffd700;
+    color: #DAB88B;
   }
 
 `;
 
 const Home = () => (
-    <HomeStackStyled direction={{ xs: 'column', md: 'row' }} spacing={2} id="HomeStack" minHeight={'100vh'}>
+    <HomeStackStyled direction={{ xs: 'column', md: 'row' }} spacing={2} id="Home-Container" minHeight={'100vh'}>
       <ProfilePicStyled src={ ProfilePic } alt="profile-pic" />
       <Stack sx={{ paddingLeft: 1 }}>
         <Typography variant="h1">

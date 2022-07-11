@@ -24,9 +24,18 @@ const NavBar = () => {
     setAnchorElNav(null)
   }
 
+  const scroll = (pageName:string) => {
+    const section = document.querySelector( `#${pageName}-Container` )
+    console.log(section)
+    console.log(pageName)
+    console.log(`#${pageName}-Container`)
+    section?.scrollIntoView( { behavior: 'smooth', block: 'start' } )
+    setAnchorElNav(null)
+  };
+
   return (
-    <AppBar position="sticky" color="primary">
-      <Container maxWidth="xl">
+    <AppBar position="fixed" color="primary">
+      <Container maxWidth={false} >
         <Toolbar disableGutters>
           <CodeIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
@@ -77,7 +86,7 @@ const NavBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => scroll(page)}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -100,13 +109,13 @@ const NavBar = () => {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Andrew Palet
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => scroll(page)}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
                 {page}
