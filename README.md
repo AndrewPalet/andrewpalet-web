@@ -1,10 +1,11 @@
+<h1 align="center">Andrew Palet's Portfolio Website<h1>
+
 <p align="center">
-    # Andrew Palet's Portfolio Webstie
+    <img width="800" src="https://media.giphy.com/media/5hfUpdQERwKPRd5kdd/giphy.gif" alt="website-gif" />
 </p>
 
-![Website Screenshot](website-screenshot.png?raw=true 'Website Screenshot')
 
-## <a href="http://www.andrewpalet.com/">View my site live!</a>
+<h3 align="center"><a href="http://www.andrewpalet.com/">View my site live!</a><h3>
 
 ## Description
 
