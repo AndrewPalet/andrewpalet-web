@@ -12,8 +12,7 @@ export const projects = [
     title: 'Portfolio Website - React',
     description:
       'Built a portfolio website from scratch in React using Typescript, CSS, HTML, Material UI, Emotion, and deployed using Netlify',
-    image:
-      'https://assets.entrepreneur.com/content/3x2/2000/1649279368-Ent-2022Python.jpeg?auto=webp&quality=95&crop=16:9&width=675',
+    image: 'https://media.giphy.com/media/5hfUpdQERwKPRd5kdd/giphy.gif',
     link: 'https://github.com/AndrewPalet/andrewpalet-web',
   },
   {
