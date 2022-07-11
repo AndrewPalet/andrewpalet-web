@@ -5,10 +5,11 @@ import { Container, Typography } from '@mui/material'
 const AboutContainer = styled(Container)`
   text-align: center;
   margin: 100px 0 100px 0;
+  padding-top: 200px;
 `
 
 const About = () => (
-  <AboutContainer>
+  <AboutContainer id='About-Container'>
     <Typography variant="h1" sx={{ marginBottom: 2 }}>
       About
     </Typography>

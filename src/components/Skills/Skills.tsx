@@ -10,6 +10,7 @@ import { skillsList } from '../../data/data'
 const SkillsContainer = styled(Container)`
   text-align: center;
   margin: 100px 0 100px 0;
+	padding-top: 100px;
 `
 
 const SkillGridItem = styled(Grid)`
@@ -21,7 +22,7 @@ const SkillGridItem = styled(Grid)`
 const Skills = () => {
   return (
     <SkillsContainer id="Skills-Container">
-      <MemoryIcon />
+      <MemoryIcon sx={{ fontSize: 35 }} />
       <Typography variant="h1" sx={{ marginBottom: 2 }}>
         Skills & Technologies
       </Typography>

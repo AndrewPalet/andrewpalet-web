@@ -4,14 +4,14 @@ export const theme = createTheme({
   palette: {
     primary: {
       main: '#DAB88B',
-      dark: '#2e85d4', // Hover colour which in our case is a lighter colour
+      dark: '#2e85d4',
     },
     secondary: {
-      main: '#2e85d4',
+      main: '#B7CADB',
     },
     text: {
       primary: '#000000',
-      secondary: '#B7CADB',
+      secondary: '#000000',
     },
     background: {
       default: '#ffffff',
@@ -62,6 +62,7 @@ export const theme = createTheme({
     },
     body1: {
       fontSize: 16,
+      fontWeight: 300,
     },
     body2: {
       fontSize: 14,
@@ -72,16 +73,13 @@ export const theme = createTheme({
     },
   },
   components: {
-    MuiCard: {
-      styleOverrides: {},
-    },
     MuiButton: {
       styleOverrides: {
         text: {
           color: '#000',
           '&:hover': {
             background: 'transparent',
-            color: '#2e85d4',
+            color: '#F3E9DD',
           },
         },
         startIcon: {
