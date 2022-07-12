@@ -12,6 +12,7 @@ import Skills from './components/Skills/Skills'
 import Container from '@mui/material/Container'
 import NavBar from './components/NavBar/NavBar'
 import { Box } from '@mui/material'
+import Footer from './components/Footer/Footer'
 
 const AppBox = styled(Box)`
   background-color: #fdf6ec;
@@ -34,6 +35,7 @@ function App() {
             <Projects />
             <Skills />
             <Contact />
+            <Footer />
           </ContentContainer>
         </AppBox>
       </ThemeProvider>
