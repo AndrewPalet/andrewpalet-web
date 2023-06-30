@@ -5,6 +5,7 @@ import { Stack, Typography } from '@mui/material';
 import { Container } from '@mui/system';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { jobInfo } from '../../data/data';
 
 const HomeStackStyled = styled(Stack)`
   align-items: center;
@@ -37,7 +38,7 @@ const Home = () => (
           Howdy, I'm Andrew
         </Typography>
         <Typography variant="h2">
-          I'm a Frontend Developer
+          I'm a { jobInfo.title }
         </Typography>
         <Typography variant="subtitle1">
           ☕️ Fueled by coffee
@@ -46,7 +47,7 @@ const Home = () => (
           📍 Dallas, TX
         </Typography>
         <Typography variant="subtitle1">
-          💻 Frontend Developer for McKesson
+          💻 { jobInfo.title } for { jobInfo.company }
         </Typography>
         <Container sx={{ display: 'flex', justifyContent: 'space-evenly', paddingTop: 1}}>
           <IconStyled 

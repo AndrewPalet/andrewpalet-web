@@ -9,10 +9,11 @@ const FooterContainer = styled(Container)`
 `
 
 const Footer = () => {
+  const date = new Date().getFullYear();
   return (
     <FooterContainer>
       <Typography variant='body2'>created by Andrew Palet</Typography>
-      <Typography variant='body2'>© 2022</Typography>
+      <Typography variant='body2'>© { date }</Typography>
     </FooterContainer>
   )
 }
