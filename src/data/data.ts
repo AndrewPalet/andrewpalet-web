@@ -5,11 +5,13 @@ export const jobInfo = {
 
 export const skillsList = [
   'Javascript/Typescript',
-  'React',
-  'HTML & CSS',
+  'React / React Native',
+  'AWS / Azure / Terraform / Docker',
+  'Python',
   'Flutter/Dart',
-  'React Native',
-  'NodeJS',
+  'NodeJS / REST APIs',
+  'OAuth 2.0 / SAML / KYC',
+  'PostgreSql / MongoDb / DynamoDb',
 ]
 
 export const projects = [
