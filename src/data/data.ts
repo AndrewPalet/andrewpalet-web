@@ -4,17 +4,28 @@ export const jobInfo = {
 }
 
 export const skillsList = [
-  'Javascript/Typescript',
+  'TypeScript / JavaScript',
   'React / React Native',
-  'AWS / Azure / Terraform / Docker',
+  'Node.js / REST APIs',
   'Python',
-  'Flutter/Dart',
-  'NodeJS / REST APIs',
+  'Flutter / Dart',
+  'Swift / Kotlin',
+  'AWS / Azure / Terraform / Docker',
+  'PostgreSQL / MongoDB / DynamoDB',
+  'CI/CD (CircleCI, Fastlane, GitHub Actions)',
   'OAuth 2.0 / SAML / KYC',
-  'PostgreSql / MongoDb / DynamoDb',
+  'Datadog / Mixpanel / Looker',
+  'Claude AI / OpenAI / AI Tooling',
 ]
 
 export const projects = [
+  {
+    title: 'Hire Signal',
+    description: 'Automated job board monitor that polls Greenhouse career pages, scores listings with Claude AI, and sends Discord notifications for high-fit roles. Runs autonomously on GitHub Actions with Turso as the cloud database. Built with TypeScript, Node.js, and the Anthropic API.',
+    image:
+      'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExczZoYjJ0eGJwczl4c2V6OHM5ejV2M25wdjhhN28yZHRwajFsdTFxOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/74Kw9Ao42YbiFIsxDD/giphy.gif',
+    link: 'https://github.com/AndrewPalet/hire-signal',
+  },
   {
     title: 'Vet Payment App',
     description: 'This is a Vet Payment Mobile App created in Flutter. The project includes a backend API created in NodeJS which hosts a static JSON database which the mobile app calls to get and update user information for the app',
