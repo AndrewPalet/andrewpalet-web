@@ -5,8 +5,8 @@ import { jobInfo } from '../../data/data'
 
 const AboutContainer = styled(Container)`
   text-align: center;
-  margin: 100px 0 100px 0;
-  padding-top: 200px;
+  margin: 0 0 100px 0;
+  padding-top: 100px;
 `
 
 const About = () => (

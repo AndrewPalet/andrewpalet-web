@@ -11,7 +11,8 @@ const HomeStackStyled = styled(Stack)`
   align-items: center;
   justify-content: center;
   min-width: 200px;
-  margin: 50px 0 50px 0;
+  margin: 200px 0 0 0;
+  scroll-margin-top: 100px;
   overflow: auto;
 `;
 
@@ -31,7 +32,7 @@ const IconStyled = styled('a')`
 `;
 
 const Home = () => (
-    <HomeStackStyled direction={{ xs: 'column', md: 'row' }} spacing={2} id="Home-Container" minHeight={'100vh'}>
+    <HomeStackStyled direction={{ xs: 'column', md: 'row' }} spacing={2} id="Home-Container" minHeight={'60vh'}>
       <ProfilePicStyled src={ ProfilePic } alt="profile-pic" />
       <Stack sx={{ paddingLeft: 1 }}>
         <Typography variant="h1">
